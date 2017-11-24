@@ -1,0 +1,126 @@
+/*全局设置*/
+@charset "utf-8";
+*{margin:0px; padding:0px;}
+body{font-size:16px;font-family:"Microsoft Yahei";color:#CC3300;}
+li
+{
+	list-style:none;
+	display:block;
+}
+/*整体页面*/
+.main
+{
+	width:75%;
+	margin:10px auto;
+	padding:10px; 
+	border:3px solid #99CCCC;
+	background-color:#99CCCC;
+	font-size:16px;
+	line-height:25px;
+}
+/*头部导航区*/
+h3,h4{
+	color:#009900;
+	padding:3px;
+}
+
+h4
+{
+	color:#336600;
+}
+
+.header
+{	position:fixed;
+	top:0px;
+	width:74%;
+	background-color:#99CCCC;
+	border:2px solid #009900;
+	padding:5px;
+	filter:alpha(opacity 90);
+	opacity:0.9;
+	z-index:5;
+}
+
+.header ul li
+{
+	float:left;
+}
+
+.header ul li a
+{
+	display:block;
+	text-decoration:none;
+	height:30px;
+	line-height:30px;
+	text-align:center;
+	background:#efefef; 
+	margin-left:3px;
+	border:2px solid #009900;
+	border-radius:5px;
+	color:#33CC00;
+
+}
+
+.header ul li a.on, .header ul li a:hover
+{
+	background:#FFCCCC;
+	color:#fff; 
+}
+/*样式变换按钮*/
+.btn
+{
+	float:right;	
+}
+
+input
+{
+	border:2px solid #009900;
+	background-color:#FFCCCC;
+	border-radius:5px;
+}
+/*主体内容*/
+.mainbody
+{
+	margin:50px auto;
+	margin-bottom:0px;
+	padding:15px;
+}
+
+.message01
+{
+	background:url("../images/school_gate.jpg")no-repeat;
+}
+
+.bg
+{
+	background:url("../images/b2.jpg")no-repeat;
+
+}
+
+/*简历照片*/
+.message01 img 
+{	
+	float:right;
+	/*margin:10px;*/
+}
+
+/*底部区域*/
+.footer
+{
+	height:100px;
+	padding:10px;
+	border:2px solid #009900;
+	margin-top:10px;
+	background-color:#99FFFF;
+}
+
+.footer img{
+	width:100px;
+	height:100px;
+	float:left;
+}
+
+.footer p{
+	padding:10px;
+	text-indent:2em;
+}

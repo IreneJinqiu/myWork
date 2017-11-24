@@ -1,0 +1,461 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>首页导航</title>
+		<link type="text/css" rel="stylesheet" href="css/normalize.css">
+		<link type="text/css" rel="stylesheet" href="css/index.css">
+		<link type="text/css" rel="stylesheet" href="css/clock1.css">
+		<link type="text/css" rel="stylesheet" href="css/div_animation.css">
+		<!-- 引入动画框架 -->
+		<link rel="stylesheet" href="css/animate.css"/>
+		<!-- 引入myFoucs以及相关样式-->
+		<!-- <script src="js/myfocus-2.0.1.min.js" type="text/javascript"></script> -->
+		<!-- <script type="text/javascript">
+		// 焦点图初始化的ID必须与图片列表的最外层的ID一致
+			myFocus.set({
+				id:"myFocus",
+				pattern:"mF_slide3D"//风格
+			})
+		</script> -->
+	</head>
+	<body>
+		<header>
+			<!-- 导航 -->
+			<div id="nav" class="lf">
+				<ul>
+					<li><a href="job/job.html" target="_blank" title="简历卡">简历卡</a></li>
+					<li><a href="job/change.html" target="_blank" title="简历换肤">简历换肤</a></li>
+					<li><a href="http://www.imooc.com/course/programdetail/pid/32" target="_blank">慕课网学习进度</a></li>
+					<!-- <li class="animated bounce infinite">我的作品</li> -->
+					<li class="">更多了解</li>
+						<ul id="demo_list">
+							<li><a href="demo/tour/nav_page2.html" target="_blank">导游修炼手册</a></li>
+							<li><a href="demo/tour/tour_boots.html" target="_blank">响应式页面</a></li>
+							<li><a href="imooc/imooc-First-Page.html" target="_blank">慕课网</a></li>
+							<!-- TODO<li><a href="demo/game/snack_eat.html" target="_blank">贪吃蛇游戏</a></li> -->
+							<li><a href="demo/card/spring.html" target="_blank">h5移动端贺卡</a></li>
+							<li><a href="demo/case/index.html" target="_blank">项目管理</a></li>
+						</ul>
+					<li id="job_want">求职意向：前端开发、项目管理</li>
+					<!-- 不能公开<li><a href="demo/ship/application/modules/admin/views/index.html" target="_blank">项目链接：水运在线管理平台开发</a></li> -->
+					<li><a href="">下载我的简历word版(已禁用)</a></li>
+				</ul>
+			</div>
+			<!-- 半身照 -->
+			<div id="photo" class="lf">
+				<img src="images/my1.png" src="hello">
+			</div>
+			<!-- 右侧基本信息 -->
+			<div id="my" class="rt">
+					<!-- <h3 class="animated rubberBand infinite">基本信息</h3> -->
+					<h3>基本信息</h3>
+					<ul>
+						<li>姓名：穆金秋</li>
+						<li>定居：杭州</li>
+						<li>年龄：<span class="ageSpan"></span>岁</li>
+						<li>学历：大学本科</li>
+						<li>英语水平：英语六级</li>
+						<li>曾获奖金：国家奖学金</li>
+						<li>证书：web前端开发高级工程师</li>
+						<li>经验：一年相关行业工作经验</li>
+						<li>手机号：17858409005</li>
+						<li>
+						<address>点此给我发邮件：<br/><a href="mailto:irene1442897579@foxmail.com" 
+					title="穆金秋的邮箱">irene1442897579@foxmail.com</a></address>
+						</li>
+					</ul>
+			</div>
+		</header>
+		<!-- 个性签名 -->
+		<div id="motto" class="clear">
+			<p class="animated rubberBand">自尊*自信*自立*自强<b></b>美言*美行*美心*美丽</p>
+		</div>
+		<section>
+			<!-- 轮播 -->
+			<!-- 焦点图盒子DIV加了：style="visibility:hidden"属性，这是为了防止加载前的画面闪动 -->
+			<div id="myFocus" style="visibility:hidden">
+				<!-- 加载等待 -->
+				<div class="loading">
+					<img src="images/loading.gif" alt="图片加载中"/>
+				</div>
+				<!-- 使用myfocus方法ul图片列表必须用class="pic"的div包裹 -->
+				<div class="pic">
+					<ul>
+				        <li><a href="#1"><img src="img/1a.jpg" alt="图片1"/></a></li>
+				        <li><a href="#2"><img src="img/2a.jpg" alt="图片2"/></a></li>
+				        <li><a href="#3"><img src="img/3a.jpg" alt="图片3"/></a></li>
+				        <li><a href="#4"><img src="img/4a.jpg" alt="图片4"/></a></li>
+				        <li><a href="#5"><img src="img/5a.jpg" alt="图片5"/></a></li>
+			  		</ul>
+				</div>
+			</div>
+			<!-- 学习笔记 -->
+			<div id="study_notes" class="rt">
+					<h3><a href="notes/notes.html">学习笔记</a></h3>
+					<ul class="lf">
+						<li><a href="notes/notes.html">HTML5</a></li>
+						<li><a href="notes/notes.html">CSS</a></li>
+						<li><a href="notes/notes.html">PhotoShop</a></li>
+						<li><a href="notes/notes.html">JavaScript</a></li>
+						<li><a href="notes/notes.html">jQuery</a></li>
+						<li><a href="notes/notes.html">PHP</a></li>
+						<li><a href="notes/notes.html">Ajax</a></li>
+						<li><a href="notes/notes.html">SEO&amp;雅虎军规</a></li>
+					</ul>
+					<ul class="rt">
+						<li><a href="notes/notes.html">ANGULARJS</a></li>
+						<li><a href="notes/notes.html">NODEJS</a></li>
+						<li><a href="notes/notes.html">IONIC</a></li>
+						<li><a href="notes/notes.html">BOOTSTRAP</a></li>
+						<li><a href="notes/notes.html">mySql</a></li>
+						<li><a href="notes/notes.html">PHONEGAP</a></li>
+						<li><a href="notes/notes.html">JSFRAMEWORK</a></li>
+						<li><a href="notes/notes.html">git</a></li>
+					</ul>
+			</div>
+			<!-- 练习展示 -->
+			<div id="demos">
+				<h2>练习展示</h2>
+				<!-- 音乐 -->
+				<div id="music_div" class="demo">
+					<h3>点击暂停音乐</h3>
+					<img class="play" id="music" src="images/music.png" alt="音乐图标" width="200px" height="200px">
+					<!-- 插入音乐 -->
+					<audio autoplay="true" loop="loop">
+						<source src="sound/Dana Winner - Moonlight Shadow.mp3" type="audio/mpeg">
+						您的浏览器不支持audio标签
+					</audio>
+				</div>
+				<!-- 淘宝店 -->
+				<div class="demo">
+					<h3>我的店铺</h3>
+					<a href="demo/taobao/shop.html" target="_blank"><img src="images/shop.png" alt="demo"></a>
+				</div>
+				<!-- 2048小游戏 -->
+				<div class="demo">
+					<h3>2048小游戏</h3>
+					<a href="demo/game/2048.html" target="_blank"><img src="images/2048.png" alt="demo"></a>
+				</div>
+
+				<!-- 钟表_表盘样式 -->
+				<div class="demo" id="clock_box">
+					<h3>守时守信</h3>
+					<div id="clock">
+						<div id="h"></div>
+						<div id="m"></div>
+						<div id="s"></div>
+						<div id="a1">*</div>
+						<div id="a2">*</div>
+						<div id="a3">#</div>
+						<div id="a4">*</div>
+						<div id="a5">*</div>
+						<div id="a6">9</div>
+						<div id="a7">*</div>
+						<div id="a8">*</div>
+						<div id="a9">#</div>
+						<div id="a10">*</div>
+						<div id="a11">*</div>
+						<div id="a12">12</div>
+				  	</div>
+			  	</div>
+			  	<!-- 俄罗斯方块 -->
+				<div class="demo">
+					<h3>俄罗斯方块</h3>
+					<a href="demo/game/tetris.html" target="_blank"><img src="images/elsfk.png" alt="demo"></a>
+				</div>
+				<!-- 项目管理 -->
+				<div class="demo">
+					<h3>项目管理</h3>
+					<a href="demo/case/index.html" target="_blank"><img src="images/form.png" alt="demo"></a>
+				</div>
+				<!-- PHP生成表格数据 -->
+				<!-- <div class="demo">
+					<h3>PHP</h3>
+					<a href="" target="_blank"><img src="images/php.png" alt="demo"></a>
+				</div> -->
+				<!-- AJAX异步交互 -->
+				<!-- <div class="demo">
+					<h3>AJAX异步交互</h3>
+					<a href="" target="_blank"><img src="images/ajax.png" alt="demo"></a>
+				</div> -->
+				<!-- ANGULARJS -->
+				<!-- <div class="demo">
+					<h3>ANGULARJS </h3>
+					<a href="" target="_blank"><img src="images/ag.png" alt="demo"></a>
+				</div> -->
+			</div>
+		</section>
+		<div id="footbox">
+			<div id="mysql3">
+				<h3>phpMyAdmin =》sql源码=》练习：金秋花店</h3>
+				<!-- Ming -->
+				<!-- <div class="grid">
+					<figure class="effect-ming">
+						<img src="img/sql1.jpg" alt="img09"/>
+						<figcaption>
+							<h2>Funny <span>Ming</span></h2>
+							<p>Ming sits in the corner the whole day. She's into crochet.</p>
+							<a href="#">View more</a>
+						</figcaption>			
+					</figure>
+				</div> -->
+
+				<!--milo  -->
+				<div class="grid">
+					<figure class="effect-milo">
+						<a href="http://localhost:80/phpmyadmin/" target="_blank"><img src="img/phpMyAdmin.png" alt="img11"/></a>
+					</figure>
+				</div>
+
+				<!--lily  -->
+				<div class="grid">
+					<figure class="effect-lily">
+						<a href="https://github.com/AceEzio/myJob/tree/gh-pages/sql/" target="_blank">
+						<img src="img/mysql_b.png" alt="img12"/></a>		
+					</figure>
+				</div>
+
+				<!-- jazz -->
+				<div class="grid">
+					<figure class="effect-jazz">
+					<a href="demo/flower-shop/flower.html" target="_blank">
+						<img src="img/phpMyAdmin_b.png" alt="img25"/></a>		
+					</figure>
+				</div>	 
+			</div>
+			<!--canvas绘图h5新特性独占一行  -->
+			<div id="h5new">
+				<h3>FusionCharts绘制图表--学习阶梯</h3>
+				<div id="containerfusion"></div>
+				<!-- <svg id="s1" width="750" height="400">
+			        <defs id="effect"></defs>
+			        <rect x="0" y="0" width="750" height="400" stroke="#000" fill-opacity="0"></rect>
+			    </svg> -->
+			</div>
+			<hr/>
+			<div id="threeBox">
+				<!-- 文档浏览次数 webStorage本地存储 -->
+				<div id="storage">
+					<h3>webStorage存储</h3>
+					<span id="viewCounts"></span>
+					<span id="viewNums"></span>
+					<p>
+					核心代码：<br/>
+					var VC=sessionStorage['kcount'];<br/>
+					var VN=localStorage['knum'];<br/>
+					sessionStorage.setItem('kcount',VC);<br/>
+					localStorage.setItem('knum',VN);
+					</p>
+				</div>
+				<!-- 吃豆 -->
+				<div id="eat"><canvas id="c6" width="500" height="400">您的浏览器不支持canvas标签</canvas></div>
+				<script>
+				    var ctx = c6.getContext('2d');
+				    /**闭嘴**/
+				    function closeMouth(){
+				      ctx.beginPath();
+				      ctx.arc(250,200,100,0,2*Math.PI); //外环
+				      ctx.lineTo(250,200);  //横线
+				      ctx.fillStyle = '#ff3';
+				      ctx.fill();
+				      ctx.stroke();
+
+				      ctx.beginPath();
+				      ctx.arc(250,150,25,0,2*Math.PI)//眼球
+				      ctx.fillStyle = '#abe';
+				      ctx.fill();
+
+				      ctx.beginPath();
+				      ctx.arc(250+18,142,5,0,2*Math.PI)//眼神光大
+				      ctx.fillStyle = '#fff';
+				      ctx.fill();
+
+				      ctx.beginPath();
+				      ctx.arc(250+12,133,3,0,2*Math.PI)//眼神光小
+				      ctx.fill();
+				    }
+				    //closeMouth();
+				    /**张嘴**/
+				    function openMouth(){
+				      ctx.beginPath();
+				      ctx.arc(250,200,100,Math.PI/4,7*Math.PI/4); //外环
+				      ctx.lineTo(250,200);  //上嘴唇
+				      ctx.closePath();  //闭合路径得到下嘴唇
+				      ctx.stroke();
+				      ctx.fillStyle = '#fcc';
+				      ctx.fill();
+
+				      ctx.beginPath();
+				      ctx.arc(250,150,25,0,2*Math.PI)//眼球
+				      ctx.fillStyle = '#abe';
+				      ctx.fill();
+
+				      ctx.beginPath();
+				      ctx.arc(250+18,142,5,0,2*Math.PI)//眼神光大
+				      ctx.fillStyle = '#fff';
+				      ctx.fill();
+
+				      ctx.beginPath();
+				      ctx.arc(250+12,133,3,0,2*Math.PI)//眼神光小
+				      ctx.fill();
+				    }
+				    //openMouth();
+
+				    //使用定时器定期调用张嘴&闭嘴
+				    var isOpen = true; //当前是否为张嘴
+				    setInterval(function(){
+				        ctx.clearRect(0,0,500,400);
+				        if(isOpen){
+				          closeMouth();
+				          isOpen = false;
+				        }else {
+				          openMouth();
+				          isOpen = true;
+				        }
+				    },300)
+				</script>
+				<!-- 星际旋转 -->
+				<div id="container"></div>
+				<script src="js/two.js"></script>
+				<script>
+				   var two =new Two({width:300, height: 300}).appendTo(container);
+
+				   var sun = two.makeCircle(0,0,50);
+				   sun.fill = 'red';
+				   sun.stroke = 'transparent';
+				   var sunOrbit = two.makeCircle(0,0,100);
+				   sunOrbit.fill = 'transparent';
+				   sunOrbit.stroke = '#ccc';
+
+				   var earth = two.makeCircle(100, 0, 15);
+				   earth.fill = 'blue';
+				   earth.stroke = 'transparent';
+				   var earthOrbit = two.makeCircle(100, 0, 25);
+				   earthOrbit.fill = 'transparent';
+				   earthOrbit.stroke = '#ccc';
+				   var moon = two.makeCircle(25,0, 3);
+				   moon.fill = '#000';
+				   moon.stroke = 'transparent';
+				   moon.rotation = 0;
+				   var moonGroup = two.makeGroup(moon);
+				   moonGroup.translation.set(100,0);
+
+				   var earthGroup = two.makeGroup(earth,earthOrbit,moonGroup);
+
+				   var sunGroup = two.makeGroup(sun,sunOrbit,earthGroup);
+				   sunGroup.translation.set(two.width/2, two.height/2);
+
+
+				   //two.update();
+				   two.bind('update', function(){
+				     moonGroup.rotation += 10*Math.PI/180;
+				     moonGroup.rotation %= 2*Math.PI;
+				     earthGroup.rotation += 2*Math.PI/180;
+				     earthGroup.rotation %= 2*Math.PI;
+				   })
+				   two.play();
+				   //控制音乐的播放和暂停
+				    var music=document.getElementById("music");
+					var audio=document.getElementsByTagName("audio")[0];
+					//当音乐播放完停止的时候，自动停止音乐图标的旋转效果play
+					audio.addEventListener("ended",function(event){
+						music.setAttribute("class","");
+					},false);
+					// 点击音乐图标，控制音乐的播放和暂停
+					music.onclick=function(){
+						if(audio.paused){
+							audio.play();
+							this.setAttribute("class","play");
+						}else{
+							audio.pause();
+							this.setAttribute("class","");
+						};
+					};
+				 </script>
+			</div>
+		</div>
+		<footer>
+			<p id="notice">声明:此网页出现或提到的实际网站如京东、必应搜索、慕课网等都是做网页练习使用，不涉及商业用途，望见谅!</p><br/>
+			<p>
+				<img src="images/weixin.jpg" alt="我的微信二维码">
+				扫一扫添加我为微信好友<b>&nbsp;&nbsp;<a href="#">返回顶部</a><b><br/>
+			</p><br/>
+			<address>
+				点此给我发邮件：<a href="mailto:irene1442897579@foxmail.com" 
+					title="穆金秋的邮箱">irene1442897579@foxmail.com</a>
+			</address><br/>
+			<!-- 友情链接 -->
+			<p>
+				友情链接：
+				<ul>
+					<li><a href="http://www.hutc.zj.cn/" target="_blank" title="我的母校">湖州师范学院</a></li>
+					<li><a href="http://www.imooc.com" target="_blank" title="慕课网">慕课网</a></li>
+					<!-- <li><a href="http://www.jd.com/"  target="_blank" title="京东商城">京东</li>
+					<li><a href="http://cn.bing.com/" target="_blank" title="必应搜索">必应搜索</li> -->
+				</ul>
+			<p>
+		</footer>
+		<!-- <script type="text/javascript" src="js/svg_tubiao.js"></script> -->
+		<script src="js/jquery-1.11.3.js"></script>
+		<script src="js/common.js"></script>
+		<!-- <script type="text/javascript" src="js/firstpage.js"></script> -->
+		<script type="text/javascript" src="js/clock.js"></script>
+	    <script src="js/fusioncharts.js"></script>
+	    <script src="js/fusioncharts.charts.js"></script>
+	    <script src="js/myfocus-2.0.1.min.js" type="text/javascript"></script>
+	    <script>
+		// 焦点图初始化的ID必须与图片列表的最外层的ID一致
+			myFocus.set({
+				id:"myFocus",
+				pattern:"mF_slide3D"//风格
+			});
+			// webStorage
+	        window.onload=function(){
+	        	var VC=sessionStorage['kcount'];
+				var VN=localStorage['knum'];
+				if(VC==null){
+					VC=0;
+				}
+				if(VN==null){
+					VN=0;
+				}
+	        	VC++;
+				VN++;
+				sessionStorage.setItem('kcount',VC);
+				localStorage.setItem('knum',VN);
+				viewCounts.innerHTML="文档浏览总次数<b>"+VN+"</b>";
+				viewNums.innerHTML="这是您第<b>"+VC+"</b>次刷新该文档";
+
+	            var list=[
+	                {label:'HTML5',value:1},
+	                {label:'CSS3',value:2},
+	                {label:'JavaScript',value:3},
+	                {label:'DOM',value:4},
+	                {label:'jQuery',value:5},
+	                {label:'PHP',value:6},
+	                {label:'MySQL',value:7},
+	         		{label:'AJAX',value:8},
+	         		{label:'BOOTSTRAP',value:9},
+	         		{label:'AngularJs',value:10},
+	         		{label:'PHONEGAP',value:11},
+	                {label:'IONIC',value:12},
+	                {label:'WeiXin',value:13},
+	                {label:'NodeJs',value:14},
+	                {label:'NewStart',value:1}
+	            ];
+	            //list形如：[{label:'',value:xx},{}]
+	            //使用FusionCharts绘制统计图
+	            var fc = new FusionCharts({
+	                type: 'column3d',//column2d、column3d、bar2d、bar3d、pie2d、pie3d、doughnut2d、doughnut3d
+	                width: '1100',
+	                height: '450',
+	                dataSource: {     //指定数据源
+	                    data: list
+	                }
+	            });
+	            fc.render('containerfusion'); //指定渲染在哪个容器中
+	        };
+	    </script>
+	</body>
+</html>

@@ -1,0 +1,199 @@
+body,ul,ol,li,p,h1,h2,h3,h4,h5,h6,form,fieldset,table,td,img,div,dl,dt,dd,input{margin:0px;padding:0px;}
+img{border:none;}
+/*background:none;兼容IE6*/
+input,select,textarea{outline:none;boder:none;background:none;}
+textarea{resize:none;}
+a{text-decoration:none;color:#656565;}
+ul,li{list-style:none;}
+/*清除浮动*/
+.clearfix:after{content:"";display:block;clear:both;}
+.clearfix{zoom:1;}
+.fl{float:left;}
+.fr{float:right;}
+/*首页导航*/
+*{margin:0px;padding:0px;}
+body{font-size:14px;font-family:"Microsoft Yahei";background-color:#F1FCFF;padding:5px;padding-top:0;}
+.top-content a{display:block;float:right;margin:10px;padding:5px;color:red;}
+.hello{background-color:#000;margin:10px 0px;padding:5px;}
+/*标题旋转效果*/
+h1{text-align:center;color:#fff;font-size:48px;font-family: 'Fruktur', cursive;
+   text-shadow: 1px  1px 1px #ccc,
+                   0 0 10px #fff,
+                   0 0 20px #fff,
+                   0 0 30px #fff,
+                   0 0 40px #ff00de,
+                   0 0 70px #ff00de,
+                   0 0 80px #ff00de,
+                   0 0 100px #ff00de,
+                   0 0 150px #ff00de;
+				   
+		    transform-style: preserve-3d;
+	 -moz-transform-style: preserve-3d;
+-webkit-transform-style: preserve-3d;	
+	  -ms-transform-style: preserve-3d;			   
+	   -o-transform-style: preserve-3d;			   
+   
+        animation: run  ease-in-out 9s infinite;
+   -moz-animation: run  ease-in-out 9s infinite ;	
+-webkit-animation: run  ease-in-out 9s infinite;	
+    -ms-animation: run  ease-in-out 9s infinite;	
+     -o-animation: run  ease-in-out 9s infinite;	
+}
+@keyframes run {
+      0% {
+        transform:rotateX(-5deg) rotateY(0);	
+      }
+    50% {
+        transform:rotateX(0) rotateY(180deg);	
+		 text-shadow: 1px  1px 1px #ccc,
+                   0 0 10px #fff,
+                   0 0 20px #fff,
+                   0 0 30px #fff,
+                   0 0 40px #3EFF3E,
+                   0 0 70px #3EFFff,
+                   0 0 80px #3EFFff,
+                   0 0 100px #3EFFee,
+                   0 0 150px #3EFFee;             
+      }
+      100% {
+        transform:rotateX(5deg) rotateY(360deg);	
+      }
+    }
+@-moz-keyframes run {
+      0% {
+        -moz-transform:rotateX(-5deg) rotateY(0);	
+      }
+    50% {
+        -moz-transform:rotateX(0) rotateY(180deg);	
+      		 text-shadow: 1px  1px 1px #ccc,
+                         0 0 10px #fff,
+                         0 0 20px #fff,
+                         0 0 30px #fff,
+                         0 0 40px #3EFF3E,
+                         0 0 70px #3EFFff,
+                         0 0 80px #3EFFff,
+                         0 0 100px #3EFFee,
+                         0 0 150px #3EFFee;            
+      }
+      100% {
+        -moz-transform:rotateX(5deg) rotateY(360deg);	
+      }
+    }
+@-webkit-keyframes run {
+      0% {
+        -webkit-transform:rotateX(-5deg) rotateY(0);	
+      }
+    50% {
+        -webkit-transform:rotateX(0) rotateY(180deg);	
+        		 text-shadow: 1px  1px 1px #ccc,
+                           0 0 10px #fff,
+                           0 0 20px #fff,
+                           0 0 30px #fff,
+                           0 0 40px #3EFF3E,
+                           0 0 70px #3EFFff,
+                           0 0 80px #3EFFff,
+                           0 0 100px #3EFFee,
+                           0 0 150px #3EFFee;            
+      }
+      100% {
+        -webkit-transform:rotateX(5deg) rotateY(360deg);	
+      }
+    }
+@-ms-keyframes run {
+      0% {
+        -ms-transform:rotateX(-5deg) rotateY(0);	
+
+      }
+    50% {
+        -ms-transform:rotateX(0) rotateY(180deg);	
+		
+      }
+      100% {
+        -ms-transform:rotateX(5deg) rotateY(360deg);	
+      }
+    }
+/*音乐盒子*/
+#music_div{padding:10px;}
+.play{-webkit-animation:music_disc 4s linear infinite;
+           -o-animation:music_disc 4s linear infinite;
+          -ms-animation:music_disc 4s linear infinite;
+              animation:music_disc 4s linear infinite;
+}
+@-webkit-keyframes music_disc{
+  0%{
+    -webkit-transform:rotate(0deg);
+        -ms-transform:rotate(0deg);
+         -o-transform:rotate(0deg);
+            transform:rotate(0deg);
+  }
+  100%{
+    -webkit-transform:rotate(360deg);
+        -ms-transform:rotate(360deg);
+         -o-transform:rotate(360deg);
+            transform:rotate(360deg);
+  }
+}
+@-o-keyframes music_disc{
+  0%{
+    -webkit-transform:rotate(0deg);
+        -ms-transform:rotate(0deg);
+         -o-transform:rotate(0deg);
+            transform:rotate(0deg);
+  }
+  100%{
+    -webkit-transform:rotate(360deg);
+        -ms-transform:rotate(360deg);
+         -o-transform:rotate(360deg);
+            transform:rotate(360deg);
+  }
+}
+@keyframes music_disc{
+  0%{
+    -webkit-transform:rotate(0deg);
+        -ms-transform:rotate(0deg);
+         -o-transform:rotate(0deg);
+            transform:rotate(0deg);
+  }
+  100%{
+    -webkit-transform:rotate(360deg);
+        -ms-transform:rotate(360deg);
+         -o-transform:rotate(360deg);
+            transform:rotate(360deg);
+  }
+}
+.bg{
+  width:100%;
+  min-height:900px;
+  background:url(../images/bg01-3.jpg)no-repeat center 0;
+  position:relative;
+}
+.menu{width:825px;margin:10px auto;}
+a{color:#333;}
+/*一级菜单*/
+.nav {height: 30px; border-bottom: 5px solid #F60; margin-left:50px; width:722px;font-weight:bold;}
+.nav li {float: left; position:relative; height:30px; width:120px;}
+.nav li a {display: block; height: 30px; text-align: center; line-height: 30px; width:120px; 
+  background-color:#efefef; margin-left: 1px;background:url(../images/00.png);}
+.nav li .on,.nav li a:hover{color:#fff;background-position:0px -30px;}
+/*二级菜单*/
+.subNav{position:absolute; top:30px; left:0; width:120px; height:0; overflow:hidden;}
+.subNav li a{background:#ddd;}
+.subNav li a:hover{ background:#efefef;color:#F60;}
+ul>li ul{transition:height 0.3s;}
+ul>li:hover ul{height: 210px;}
+/*钟表_表盘定位*/
+#clock{position:absolute; top:-40px; left:0;}
+/*学习笔记*/
+.study_left{background-color:#091501;background:url(../images/study.jpg)no-repeat;
+  width:240px;height:320px;float:left;/*position:fixed;top:290px;left:10px;*/
+  opacity:0.9;border:2px solid black;border-radius:20px;}
+.study_area h3{text-align:center;}
+.study_area a{color:red;display:block;padding:5px;margin-left:15px;text-decoration:underline;}
+/*技能展示*/ 
+/*#study_fruit div{float:right;border:1px solid black;position:relative;top:-200px;width:230px;height:200px;}
+#study_fruit span{display:block;}*/
+/*学习心路*/
+.study_right{background:url(../images/1-06_bg.jpg)no-repeat;float:right;
+  border:2px solid black;border-radius:20px;width:230px;height:305px;}
+/*footer*/
+footer{text-align:center;border-top:1px solid #ccc;}

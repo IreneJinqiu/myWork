@@ -1,0 +1,109 @@
+/*全局设置*/
+@charset "utf-8";
+*{margin:0px; padding:0px;}
+body{font-size:16px;font-family:"Microsoft Yahei";}
+li
+{
+	list-style:none;
+	display:block;
+}
+/*整体页面*/
+.main
+{
+	width:75%;
+	margin:10px auto;
+	padding:10px; 
+	border:3px solid #9999FF;
+	background-color:#9999FF;
+	font-size:16px;
+	line-height:25px;
+}
+/*头部导航区*/
+h3,h4{
+	color:#9933CC;
+	padding:3px;
+}
+
+.header
+{	position:fixed;
+	top:0px;
+	width:74%;
+	background-color:#9999FF;
+	border:2px solid blue;
+	padding:5px;
+	filter:alpha(opacity 80);
+	opacity:0.8;
+	z-index:5;
+}
+
+.header ul li
+{
+	float:left;
+}
+
+.header ul li a
+{
+	display:block;
+	text-decoration:none;
+	height:30px;
+	line-height:30px;
+	text-align:center;
+	background:#efefef; 
+	margin-left:3px;
+	border:2px solid blue;
+	border-radius:5px;
+	color:#FF336F;
+
+}
+
+.header ul li a.on, .header ul li a:hover
+{
+	background:#F60;
+	color:#fff; 
+}
+/*样式变换按钮*/
+.btn
+{
+	float:right;	
+}
+
+input
+{
+	border:2px solid blue;
+	background-color:#FF336F;
+	border-radius:5px;
+}
+/*主体内容*/
+.mainbody
+{
+	margin:50px auto;
+	margin-bottom:0px;
+	background:url("../images/bg1.jpg")repeat;
+	padding:15px;
+}
+/*简历照片*/
+.message01 img 
+{
+	float:right;
+	/*margin:10px;*/
+}
+/*底部区域*/
+.footer
+{
+	height:100px;
+	padding:10px;
+	border:2px solid blue;
+	margin-top:10px;
+	background-color:#CCCCFF;
+}
+
+.footer img{
+	width:100px;
+	height:100px;
+	float:left;
+}
+
+.footer p{
+	padding:10px;
+	text-indent:2em;
+}

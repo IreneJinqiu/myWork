@@ -1,0 +1,23 @@
+*{margin:0px;padding:0px;}
+
+#main{position:relative;}
+
+.box
+{
+	padding:15px 0px 0px 15px;
+	float:left;
+}
+
+.pic
+{
+	padding:10px;
+	border:1px solid #ccc;
+	border-radius:5px;
+	box-shadow:0px 0px 5px #ccc;
+}
+
+.pic img
+{
+	width:165px;
+	height:auto;
+}

@@ -1,0 +1,31 @@
+
+<div ng-include="'tpl/include/header.html'"></div>
+<div class="container">
+
+  <!-- 面包屑-->
+  <ul class="breadcrumb">
+    <li>
+      <a href="#/start">主页</a>
+    </li>
+    <li>
+      详情
+    </li>
+  </ul>
+
+  <div class="panel panel-default">
+
+    <h2>{{flower.name}}</h2>
+    <img ng-src="img/{{flower.img_lg}}" alt=""/>
+    <p>{{flower.material}}</p>
+    <p>{{flower.detail}}</p>
+
+    <div class="panel-footer">
+      <div class="text-right">
+        <button ng-click="jump('/order/'+flower.did)" class="btn btn-success">我要下单</button>
+        <button ng-click="jump('/main')" class="btn btn-primary">我再看看</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div ng-include="'tpl/include/footer.html'"></div>

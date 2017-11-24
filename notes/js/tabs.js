@@ -1,0 +1,23 @@
+$(function(){
+	$("div.my_tabs>ul").on(
+      "click","[data-toggle='item']",function(e){
+      //获得目标元素封装为jQuery对象
+      var $target=$(e.target);
+      e.preventDefault();
+      //如果当前a的父元素不是active的
+      if(!$target.parent().hasClass("active")){
+        //获得当前a的父元素的所有兄弟中class为active的，移除其active类
+        $target.parent()
+               .siblings(".active")
+               .removeClass("active");
+        //为当前a的父元素添加active类
+        $target.parent().addClass("active");
+        //获得当前a的href属性,保存在变量selector中
+        //使用selector查找div，为其添加active类，再查找其所有兄弟中class为active的移除active类
+        $($target.attr("href"))
+          .addClass("active")
+          .siblings(".active")
+          .removeClass("active");
+      }
+    });
+});

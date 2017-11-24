@@ -1,0 +1,18 @@
+
+body{
+  margin:60px 0 60px 0;
+}
+
+.navbar-footer-menu{
+  list-style: none;
+  margin:0;
+  padding:0
+}
+
+.navbar-footer-menu li{
+
+  display: inline-block;
+  line-height: 50px;
+  width: 30%;
+  text-align: center;
+}

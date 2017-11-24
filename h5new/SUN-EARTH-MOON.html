@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="js/two.js"></script>
+  <style>
+    svg {
+      background: #222;
+    }
+  </style>
+</head>
+<body>
+ <div id="container"></div>
+ <script>
+   var two =new Two({width:600, height: 600}).appendTo(container);
+
+   var sun = two.makeCircle(0,0,100);
+   sun.fill = 'red';
+   sun.stroke = 'transparent';
+   var sunOrbit = two.makeCircle(0,0,200);
+   sunOrbit.fill = 'transparent';
+   sunOrbit.stroke = '#ccc';
+
+   var earth = two.makeCircle(200, 0, 30);
+   earth.fill = 'blue';
+   earth.stroke = 'transparent';
+   var earthOrbit = two.makeCircle(200, 0, 50);
+   earthOrbit.fill = 'transparent';
+   earthOrbit.stroke = '#ccc';
+   var moon = two.makeCircle(50,0, 5);
+   moon.fill = 'gold';
+   moon.stroke = 'transparent';
+   moon.rotation = 0;
+   var moonGroup = two.makeGroup(moon);
+   moonGroup.translation.set(200,0);
+
+   var earthGroup = two.makeGroup(earth,earthOrbit,moonGroup);
+
+   var sunGroup = two.makeGroup(sun,sunOrbit,earthGroup);
+   sunGroup.translation.set(two.width/2, two.height/2);
+
+
+   //two.update();
+   two.bind('update', function(){
+     moonGroup.rotation += 10*Math.PI/180;
+     moonGroup.rotation %= 2*Math.PI;
+     earthGroup.rotation += 2*Math.PI/180;
+     earthGroup.rotation %= 2*Math.PI;
+   })
+   two.play();
+ </script>
+</body>
+</html>

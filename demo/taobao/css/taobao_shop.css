@@ -1,0 +1,71 @@
+@charset=utf-8;
+*{margin:0px;padding:0px;}
+body{
+font-size:12px;
+line-height:1.7;
+background-color:#ccc;
+}
+header{
+border:1px solid #abcdef;
+background:#abcdef;
+width:100%;
+height:100px;
+}
+li{
+list-style:none;
+}
+#content{
+width:800px;
+margin:0px auto;
+padding:20px;
+border:1px solid red;
+background:#fff;
+}
+#content h1{color:blue;}
+#content .item{
+padding:20px;
+margin-bottom:20px;
+border:2px solid blue;
+background-color:#abcdef;
+}
+#content .item h2{
+font-size:16px;
+font-weight:bold;
+border-bottom:2px dotted blue;
+margin-bottom:10px;
+}
+/*display:inline，使图片在一行中显示*/
+#content .item li{
+display:inline;
+margin-right:10px;
+} 
+#content .item li a img{
+width:230px;
+height:230px;
+border:none;
+}
+/*常用小技巧：将左部距离先设为50%，再进行调整*/
+#menu{
+position:fixed;
+top:100px;
+left:50%;
+margin-left:400px;
+width:80px;
+}
+#menu ul li a{
+display:block;
+margin:5px 0px;
+font-size:14px;
+font-weight:bold;
+color:red;
+width:80px;
+height:50px;
+line-height:50px;
+text-decoration:none;
+text-align:center;
+}
+/*鼠标选中:hover或光标聚焦.current*/
+#menu ul li a:hover,#menu ul li a.current{
+color:#fff;
+background:blue;
+}

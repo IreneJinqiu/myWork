@@ -1,0 +1,40 @@
+*{margin:0px;padding:0px;}
+
+#main
+{/*CSS3多栏布局*/
+/*每一栏的宽度202，浏览器会根据显示屏大小自行判断分几栏显示*/
+	/*-webkit-column-width:202px;
+	-moz-column-width:202px;
+	-o-column-width:202px;
+	-ms-column-width:202px;*/
+	/*定义显示几栏，浏览器会根据显示屏大小自行缩放每栏的宽度，太窄图片不完整*/
+	-webkit-column-count:5;
+	-moz-column-count:5;
+	-o-column-count:5;
+	-ms-column-count:5;
+	/*定义栏与栏之间的竖形分割线*/
+	-webkit-column-rule:3px solid red;
+	/*定义栏与栏之间的间隔，不一定按照规则，会根据显示屏大小以及列数平分距离*/
+	-webkit-column-gap:5px;
+
+}
+
+.box
+{
+	padding:10px 0px 0px 15px;
+}
+
+.pic
+{
+	padding:10px;
+	border:1px solid #ccc;
+	border-radius:5px;
+	box-shadow:0px 0px 5px #ccc;
+	width:165px;
+}
+
+.pic img
+{	display:block;
+	width:165px;
+	height:auto;
+}

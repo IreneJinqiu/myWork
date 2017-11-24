@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/tour_boot.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<!--页头-->
+<div class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">
+                <span class="logo"></span>
+            </a>
+            <a class="navbar-toggle" data-toggle="collapse" href="#menu">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+        </div>
+        <div class="navbar-collapse collapse" id="menu">
+            <ul class="nav navbar-nav">
+                <li class="active dropdown">
+                    <a data-toggle="dropdown" href="#">
+                        更多 <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">国际长短线游</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">国内中长线游</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">省内周边短线游</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">游轮度假游</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">经典一日游</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">同业入口</a></li>
+                        <li class="divider"></li>
+                        <li><a href="nav_page2.html" target="_blank">导游登陆</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <a class="navbar-link navbar-text navbar-right" href="#" id="btLogin">登录</a>
+            <span class="navbar-text navbar-right">|</span>
+            <a class="navbar-link navbar-text navbar-right" href="#" id="btZhuce">注册</a>
+            <!-- 模态登陆框 -->
+            <div class="modal" id="modal1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <h4>用户登录</h4>
+                    <p class="alert">
+                        请在此处输入您的登陆信息。
+                    </p>
+                    <form id="login-form">
+                        <input type="text" placeholder="请输入登陆手机号" name="lname" id="lname"><br/>
+                        <input type="password" placeholder="请输入登录密码" name="lpwd"><br/>
+                        <input type="button" value="提交登录信息" id="loginSubmit">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- 模态注册框 -->
+            <div class="modal" id="modal2">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <h4>用户注册</h4>
+                    <p class="alert">
+                        请在此处输入您的注册信息。
+                    </p>
+                    <form id="zhuce-form">
+                        <input type="text" placeholder="请输入有效手机号" name="zname" id="zname"><br/>
+                        <input type="password" placeholder="请输入登录密码" name="zpwd"><br/>
+                        <input type="button" value="提交注册信息" id="zhuceSubmit">
+                    </form>
+                </div>
+            </div>
+        </div>
+            <form class="navbar-form navbar-right">
+                <div class="form-group">
+                    <label class="sr-only" for="kw">搜索关键字</label>
+                    <input class="form-control" placeholder="搜索" id="kw" type="text"/>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!--主体-->
+<div class="main">
+    <div class="container">
+        <!--欢迎文字-->
+        <div class="row">
+            <div class="col-xs-12">
+                <h2 id="welcome">新世界带你旅游带你飞</h2>
+            </div>
+        </div>
+        <!--第一行：大小小-->
+        <div class="row">
+            <div class="col-md-8 col-sm-12">
+                <div class="big">  <!--大-->
+                <!-- bootstrap轮播 -->
+                 <div id="ad1" class="carousel slide" data-ride="carousel" data-interval="4000">
+                    <!--轮播广告的内容 —— 会滚动-->
+                    <div class="carousel-inner">
+                      <div class="item active">
+                        <img src="images/loop1_1.jpg">
+                        <div class="carousel-caption">
+                          <h4>东阳横店</h4>
+                        </div>
+                      </div>
+                      <div class="item">
+                        <img src="images/loop1_2.jpg">
+                        <div class="carousel-caption">
+                          <h4>淳安千岛湖</h4>
+                        </div>
+                      </div>
+                      <div class="item">
+                        <img src="images/loop1_3.jpg">
+                        <div class="carousel-caption">
+                          <h4>桐乡乌镇</h4>
+                        </div>
+                      </div>
+                      <div class="item">
+                        <img src="images/loop1_4.jpg">
+                        <div class="carousel-caption">
+                          <h4>杭州西湖</h4>
+                        </div>
+                      </div>
+                      <div class="item">
+                        <img src="images/loop1_5.jpg">
+                        <div class="carousel-caption">
+                          <h4>上海玛雅水公园</h4>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!--轮播广告的控制工具 —— 不会滚动-->
+                    <a class="carousel-control left" data-slide="prev" href="#ad1">
+                      <span class="glyphicon glyphicon-chevron-left"></span>
+                    </a>
+                    <a class="carousel-control right" data-slide="next" href="#ad1">
+                      <span class="glyphicon glyphicon-chevron-right"></span>
+                    </a>
+                  </div>  
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-12">
+                <div class="row">
+                    <div class="col-md-12 col-sm-6">
+                        <div class="small"> <!--小-->
+                            <img class="img-responsive" src="images/loop1_4.jpg">
+                            <!-- TODO: 小图上方应该有半透明遮罩-->
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-sm-6">
+                        <div class="small"> <!--小-->
+                            <div class="media">
+                                <div class="media-left media-middle">
+                                    <img src="images/new_world.jpg" alt=""/>
+                                </div>
+                                <div class="media-body">
+                                    <ul class="list-unstyled">
+                                        <li><a href="404.html">大华东N日游</a></li>
+                                        <li><a href="404.html">张家界--凤凰古城</a></li>
+                                        <li><a href="404.html">四川九寨沟--昆大丽</a></li>
+                                        <li><a href="404.html">西安双飞五日游</a></li>
+                                        <li><a href="404.html">内蒙古大草原</a></li>
+                                        <li><a href="404.html">东北冰雪世界</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--第二行：小小大-->
+        <div class="row">
+            <div class="col-md-8 col-md-push-4 col-sm-12">
+                <div class="big">  <!--大-->
+                    <img class="img-responsive" src="images/loop2_3.jpg">
+                    <!-- TODO: 图片上应该有文字和按钮-->
+                </div>
+            </div>
+            <div class="col-md-4 col-md-pull-8 col-sm-12">
+                <div class="row">
+                    <div class="col-md-12 col-sm-6">
+                        <div class="small"> <!--小-->
+                            <img class="img-responsive" src="images/loop1_1.jpg">
+                            <!-- TODO: 小图上方应该有半透明遮罩-->
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-sm-6">
+                        <div class="small"> <!--小-->
+                            <div class="media">
+                                <div class="media-left media-middle">
+                                    <img src="images/nw.png" alt=""/>
+                                </div>
+                                <div class="media-body">
+                                    <ul class="list-unstyled">
+                                        <li><a href="404.html">大华东N日游</a></li>
+                                        <li><a href="404.html">张家界--凤凰古城</a></li>
+                                        <li><a href="404.html">四川九寨沟--昆大丽</a></li>
+                                        <li><a href="404.html">西安双飞五日游</a></li>
+                                        <li><a href="404.html">内蒙古大草原</a></li>
+                                        <li><a href="404.html">东北冰雪世界</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--第三行：大小小-->
+        <div class="row">
+            <div class="col-md-8 col-sm-12">
+                <div class="big">  <!--大-->
+                    <img class="img-responsive" src="images/air.png">
+                    <!-- TODO: 图片上应该有文字和按钮-->
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-12">
+                <div class="row">
+                    <div class="col-md-12 col-sm-6">
+                        <div class="small"> <!--小-->
+                            <img class="img-responsive" src="images/loop1_2.jpg">
+                            <!-- TODO: 小图上方应该有半透明遮罩-->
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-sm-6">
+                        <div class="small"> <!--小-->
+                            <div class="media">
+                                <div class="media-left media-middle">
+                                    <img src="images/weixins.jpg" alt=""/>
+                                </div>
+                                <div class="media-body">
+                                    <ul class="list-unstyled">
+                                        <li><a href="404.html">大华东N日游</a></li>
+                                        <li><a href="404.html">张家界--凤凰古城</a></li>
+                                        <li><a href="404.html">四川九寨沟--昆大丽</a></li>
+                                        <li><a href="404.html">西安双飞五日游</a></li>
+                                        <li><a href="404.html">内蒙古大草原</a></li>
+                                        <li><a href="404.html">东北冰雪世界</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--页尾php-->
+<div id="foot"></div>
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/bootstrap.js"></script>
+<script>
+    $('#foot').load('data/footer.php');
+</script>
+<script>
+    //点击登陆显示登陆框
+    btLogin.onclick=function(e){
+        e.preventDefault();
+        var modal=document.querySelector('#modal1');
+        modal1.style.display='block';
+    };
+    //点击注册显示注册框
+    btZhuce.onclick=function(e){
+        e.preventDefault();
+        var modal=document.querySelector('#modal2');
+        modal2.style.display='block';
+    };
+
+    //登陆请求
+    $('#loginSubmit').click(function(){
+        //读取用户的输入——表单序列化
+      var inputData = $('#login-form').serialize();
+      //异步提交请求，进行验证
+      $.ajax({
+        type: 'POST',
+        url: 'data/login.php',
+        data: inputData,
+        success: function(txt, msg, xhr){
+          if(txt=='ok'){  //登录成功
+            $('#modal1').fadeOut(300);
+            var loginName = $('[name="lname"]').val();
+            sessionStorage['loginName']= loginName;
+            //修改页头上的欢迎消息
+            $('#welcome').html('欢迎回来：'+loginName); 
+          }else {
+           //登录失败
+            $('#modal1 .alert').html('登录失败！错误消息为：'+txt);
+          }
+        }
+      });
+    });
+    //注册请求
+    $('#zhuceSubmit').click(function(){
+        //读取用户的输入——表单序列化
+      var inputData = $('#zhuce-form').serialize();
+      //异步提交请求，进行验证
+      $.ajax({
+        type: 'POST',
+        url: 'data/zhuce.php',
+        data: inputData,
+        success: function(txt, msg, xhr){
+          if(txt!='注册失败'){  //登录成功
+            $('#modal2').fadeOut(300);
+            //修改页头上的欢迎消息
+            $('#welcome').html(txt); 
+          }else {
+           //登录失败
+            $('#modal2 .alert').html(txt);
+          }
+        }
+      });
+    });
+    //验证手机号是否符合格式
+    function valiName(txt){
+        var reg = /^1[34578]\d{9}$/;
+        if(reg.test(txt.value)){
+            $(notName).hide();
+            return true;
+        }else{
+            // txt.className="focusthis";
+            $(notName).show();
+            txt.value="";
+            return false;
+        }
+    }
+    //验证密码是否符合格式
+    function valiPwd(txt){
+        var reg=/^\d{6}$/;
+        if(reg.test(txt.value)){
+            $(notPass).hide();
+            return true;
+        }else{
+            $(notPass).show();
+            txt.className="focusthis";
+            txt.value="";
+            return false;
+        }
+    }
+
+    //注册时判断手机号是否已存在
+    $("#zname").blur(function(){
+        var n = this.value;
+      //使用XHR发起异步请求
+      $.get('data/checkuname.php',{'zname':n}, function(txt,msg,xhr){
+        if(txt==='exists'){
+          $('#modal2 .alert').html('号码已注册，请直接登录').css('color','#a00');
+        }else if(txt=='non-exists'){
+          $('#modal2 .alert').html('号码未注册，可以使用').css('color','#0a0');
+        }else {
+          $('#modal2 .alert').html(txt);
+        }
+      });
+    });
+    </script>
+</body>
+</html>

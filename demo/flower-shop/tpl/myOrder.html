@@ -1,0 +1,29 @@
+<div ng-include="'tpl/include/header.html'"></div>
+<div class="container">
+  <h2 class="text-center">我的订单</h2>
+
+  <table class="table">
+    <thead>
+    <tr>
+      <th>编号</th>
+      <th>鲜花</th>
+      <th>时间</th>
+      <td>联系人</td>
+    </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="flower in flowerList">
+        <td>{{flower.oid}}</td>
+        <td>
+          <a href="#/detail/{{flower.did}}">
+            <img ng-src="img/{{flower.img_sm}}" alt=""/>
+          </a>
+        </td>
+        <td>{{flower.order_time}}</td>
+        <td>{{flower.user_name}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+<div ng-include="'tpl/include/footer.html'"></div>

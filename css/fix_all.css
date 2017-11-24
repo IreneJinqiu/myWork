@@ -1,0 +1,87 @@
+* {
+    box-sizing: border-box;
+}
+body{
+    font-size:14px;
+    font-family: "Microsoft YaHei","Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #fff;
+    background-color: #000;
+}
+a{
+    color:#fff;
+    text-decoration: none;
+    display:block;
+    padding:10px;
+}
+li{
+    list-style:none;
+}
+div {
+    border: 1px solid #BD2A2C;
+}
+h1{
+    text-align: center;
+    padding: 10px;
+    background-image: linear-gradient(to bottom, #a00, #000, #a00);
+}
+.main:after,
+.container:after {
+    content: ' ';
+    display: table;
+    clear:both;
+}
+.left,
+.middle,
+.right {
+    float: left;
+}
+.container > img {
+    float: left;
+}
+
+/*PC屏幕专用样式*/
+@media screen and (min-width: 992px) {
+    .left,
+    .right {
+        width: 20%;
+    }
+    .middle {
+        width: 60%;
+    }
+    .container img {
+        width: 25%;
+    }
+}
+/*PAD屏幕专用样式*/
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .left {
+        width: 25%;
+    }
+    .middle {
+        width: 75%;
+    }
+    .right {
+        display: none;
+    }
+    .container img {
+        width: 25%;
+    }
+}
+/*PHONE屏幕专用样式*/
+@media screen and (max-width: 767px) {
+    .left {
+        width: 100%;
+    }
+    .middle {
+        width: 100%;
+    }
+    .right {
+        display: none;
+    }
+    .container img {
+        width: 50%;
+    }
+}
+footer{
+    background-image: linear-gradient(to bottom, #000,#a00);
+}

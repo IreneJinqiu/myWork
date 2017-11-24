@@ -1,0 +1,310 @@
+<!doctype>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>导游修炼手册</title>
+		<link rel="stylesheet" type="text/css" href="css/nav_2.css">
+		<!-- <link href="jquery-ui-1.11.4/jquery-ui.css" rel="stylesheet"/> -->
+		<script src="js/jquery-1.11.3.js"></script>
+		<script src="js/jquery-ui-1.11.4/jquery-ui.js"></script>
+	</head>
+	<body>
+		<!-- 页面顶部/header/id="top" -->
+		<header id="top">
+			<h1 class="lf">导游修炼手册</h1>
+			<!-- 登陆框 -->
+			<div id="login">
+				<h3>欢迎登陆</h3>
+				<form method="post" action="get_Form_Message.php">
+					<lable for="userName">手机号: </lable>
+					<input type="text" name="userName" id=userName class="hintText"
+						placeholder="注册手机号" 
+						onfocus="nameFocus(this)"
+						onblur="valiName(this)"/>
+					<span id="notName" style="display:none;color:#ff0000;">
+						<img src="images/err.png" alt="error">
+					</span><br/>
+
+					<lable for="password">密&nbsp;&nbsp;&nbsp;码: </lable>
+					<input type="text" name="password" id="password" class="hintText"
+						placeholder="六位数字"
+						onfocus="pwdFocus(this)"
+						onblur="valiPwd(this)"/>
+					<span id="notPass" style="display:none;color:#ff0000;">
+						<img src="images/err.png" alt="error">
+					</span><br/>
+
+					验证码：<img src="data/vcode.php">
+					<input type="text" placeholder="验证码" id="userCode" class="hintText"
+					onfocus="codeFocus(this)"
+					onblur="valiCode(this)"/><br/>
+
+					<lable><a href="404.html">同意使用协议《协议》</a></lable>
+
+					<input type="checkbox" class="agree" onclick="btnEnable(this)"/>同意<br/>
+        			<input type="reset" value="重置" class="button"/>
+        			<input type="submit" value="登陆" class="button" onclick="mySubmit()"/>
+				</form>
+			</div><!-- 登陆 -->
+		</header>
+
+		<!-- logo和搜索框/div/id="top_main" -->
+		<div id="top_main">
+			<!-- 新世界国旅logo -->
+			<div>
+				<img src="images/nw.png" alt="新世界logo">
+			</div>
+			<!-- 搜索框 -->
+			<div id="search">
+				<input type="text"/>
+				<button>搜索</button>
+				<button id="change_color">随变色</button>
+				<p>
+					<span>关键词：</span>导游、景点、酒店、停车场、饭店、购物店、旅游纪念品
+				<p>
+			</div>
+		</div>
+
+		<!-- 主导航/nav/id="nav"-->
+		<nav id="nav">
+			<!-- 按地域划分的横向主导航 -->
+			<div id="location_nav">
+				<ul id="nav_main">
+					<li><a href="404.html">杭州</a></li>
+					<li><a href="404.html">省内周边</a></li>
+					<li><a href="404.html">上海</a></li>
+					<li><a href="404.html">江苏</a></li>
+					<li><a href="404.html">安徽</a></li>
+					<li><a href="404.html">湖南</a></li>
+					<li><a href="404.html">四川</a></li>
+					<li><a href="404.html">云南</a></li>
+					<li><a href="404.html">西藏</a></li>
+					<li><a href="404.html">陕西</a></li>
+					<li><a href="404.html">内蒙古</a></li>
+					<li><a href="404.html">新疆</a></li>
+					<li><a href="404.html">东北</a></li>
+					<li><a href="404.html">其他</a></li>
+				</ul>
+			</div>
+			<div id="golden_ways" class="rt">
+				<!-- 经典线路 -->
+				<h3>经典线路</h3>
+				<ul id="nav_details">
+					<li><a href="404.html">杭州N日游</a></li>
+					<li><a href="404.html">小华东--杭千黄</a></li>
+					<li><a href="404.html">大华东八日游</a></li>
+					<li><a href="404.html">张家界--凤凰古城</a></li>
+					<li><a href="404.html">四川九寨沟</a></li>
+					<li><a href="404.html">昆大丽</a></li>
+					<li><a href="404.html">西安双飞五日游</a></li>
+					<li><a href="404.html">内蒙古大草原</a></li>
+					<li><a href="404.html">东北冰雪世界</a></li>
+					<li><a href="404.html">西藏自由行</a></li>
+				</ul>
+			</div>
+			<div id="loop_imgs_01" class="rt">
+				<!-- 轮播图片 -->
+				<div id="slider">
+					<ul id="imgs">
+					</ul>
+				    <ul id="indexs">
+				    </ul>
+				</div>
+			</div>
+		</nav>
+
+		<!-- banner部分/div/id="banner" -->
+		<div id="banner">
+			<div id="loop_imgs_02">
+				<!-- 点击换图图片 -->
+				<img id="loop2" src="images/loop2_1.jpg" alt="1" style="width:780px;height:220px;">
+			</div>
+			<div id="hot_share" class="rt">
+				<!-- 热门分享 -->
+				<h3>热门分享</h3>
+				<ul>
+					<li><a href="404.html">当下热门时政_新闻</a></li>
+					<li><a href="404.html">如何带好杭州一日游</a></li>
+					<li><a href="404.html">秋季带团注意事项</a></li>
+					<li><a href="404.html">导游的应急包应该准备的物品清单</a></li>
+					<li><a href="404.html">杭州市各种求援救援电话</a></li>
+					<li><a href="404.html">关于是否需要踩线的一些个人意见</a></li>
+					<li><a href="404.html">与游客放生矛盾时该如何处理</a></li>
+					<li><a href="404.html">南北方客人的性格分析</a></li>
+					<li><a href="404.html">接待福建动车团队的注意事项</a></li>
+					<li><a href="404.html">加景点的时机选择与铺垫</a></li>
+					<li><a href="404.html">做好欢送词，圆满结束行程</a></li>
+					<li><a href="404.html">导游的应急包应该准备的物品清单</a></li>
+					<li><a href="404.html">杭州市各种求援救援电话</a></li>
+					<li><a href="404.html">关于是否需要踩线的一些个人意见</a></li>
+					<li><a href="404.html">与游客放生矛盾时该如何处理</a></li>
+					<li><a href="404.html">南北方客人的性格分析</a></li>
+					<li><a href="404.html">导游的应急包应该准备的物品清单</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="clear"></div>
+		<!-- 滚动播放的通告 -->
+		<!-- <div id="middle_ad"></div> -->
+		<!-- 主体内容/section/id="main" -->
+		<section id="main">
+			<div class="my-accordion">
+				<h4>迎春桃花朵朵开</h4>
+				<p>
+					<img src="images/taohua.jpg" style="width:200px;height:150px;"><br/>
+					桃花坞裏桃花庵，桃花庵裏桃花仙。桃花仙人种桃树，又折花枝当酒钱。<br/>
+					酒醒只在花前坐，酒醉还须花下眠。花前花後日复日，酒醉酒醒年复年。<br/>
+					不愿鞠躬车马前，但愿老死花酒间。车尘马足贵者趣，酒盏花枝贫者缘。<br/>
+					若将富贵比贫贱，一在平地一在天。若将贫贱比车马，他得驱驰我得闲。<br/>
+					世人笑我忒风颠，我咲世人看不穿。记得五陵豪杰墓，无酒无花锄作田。
+				</p>
+				<h4>盛夏荷叶无穷碧</h4>
+				<p>
+					<img src="images/hehua.jpg" style="width:200px;height:150px;"><br/>
+					水光潋滟晴方好，山色空濛雨亦奇。欲把西湖比西子，淡妆浓抹总相宜。<br/>
+					晴天，西湖水波荡漾，在阳光照耀下，光彩熠熠，美极了。下雨时，远处的山笼罩在烟雨之中，时隐时现，眼前一片迷茫，这朦胧的景色也是非常漂亮的。如果把美丽的西湖比作美人西施，那么淡妆也好，浓妆也罢，总能很好地烘托出她的天生丽质和迷人神韵。
+				</p>
+				<h4>秋香原是桂花开</h4>
+				<p>
+					<img src="images/guihua.jpg" style="width:200px;height:150px;"><br/>
+					江南好，风景旧曾谙；日出江花红胜火，春来江水绿如蓝。能不忆江南？<br/>
+					江南忆，最忆是杭州；山寺月中寻桂子，郡亭枕上看潮头。何日更重游！<br/>
+					江南忆，其次忆吴宫；吴酒一杯春竹叶⑻，吴娃双舞醉芙蓉⑼。早晚复相逢！<br/>
+					江南的回忆，最能唤起追思的是像天堂一样的杭州：游玩灵隐寺寻找皎洁月亮中的桂子，登上郡亭 ，枕卧其上 ，欣赏那起落的钱塘江大潮。什么时候能够再次去游玩？<br/>
+					词以“江南忆，最忆是杭州”领起，前三字“江南忆”和第一首词的最后三字“忆江南”勾连，形成词意的连续性。后五字“最忆是杭州”又突出了作者最喜爱的一个江南城市。
+				</p>
+				<h4>凛冬到超山来看梅</h4>
+				<p>
+					<img src="images/meihua.jpg" style="width:200px;height:150px;"><br/>
+					宋代陆游的《卜算子·咏梅》<br/>
+					驿外断桥边，寂寞开无主。已是黄昏独自愁，更著风和雨。<br/> 
+					无意苦争春，一任群芳妒。零落成泥碾作尘，只有香如故。<br/>
+				</p>
+			</div>
+			<div id="tab_page">
+				<div class="my_tabs">
+					<ul>
+						<li class="active" ><a href="#tab1" data-toggle="item">初级导游员</a></li>
+						<li><a href="#tab2" data-toggle="item">中级导游员</a></li>
+						<li><a href="#tab3" data-toggle="item">高级导游员</a></li>
+					</ul>
+				</div>
+				<div class="container">
+					<div id="tab1" class="box active">
+					<h3>初级导游员考试科目<h3/><hr/>
+					<p>
+	        			1．导游专业知识（包括政策与法规、全国导游基础知识、导游业务三部分。时间约3小时）<br/>
+	        			2．地方导游基础知识（包括本地区政治、经济、地理、文化、历史、社会和旅游等方面的知识。时间约1．5小时）<br/>
+	       				3．现场导游。外语类考生加试所报考的外语（语种包括英、日、德、法、西、俄和朝鲜等语种，时间约2小时）；
+	       				非外语类考生加试汉语言文学知识。
+	       				三类社导游考试科目为：政策与法规、导游基础知识、导游业务、现场导游和汉语言文学知识五科。<br/>
+	       			</p>
+					<img src="images/tour01.jpg">
+					</div>
+					<div id="tab2" class="box">
+					<h3>中级导游员考试科目</h3><hr/>
+					<p>
+						1.学历要求：初级导游报考同语种中级导游和初级外语导游报考中级中文（普通话）导游的，学历不限；
+						初级中文（普通话）导游和中级中文（普通话）导游报考中级外语导游的，需具备所报考语种大专以上学历。<br/>
+						2.职业经历：取得导游员资格证书满3年,或具有大专以上学历的取得导游员资格证书满2年，
+						并且在报考前3年内(截止到2016年6月1日，下同)实际带团不少于90个工作日，
+						带团工作期间表现出良好的职业道德。<br/>
+						3.业绩表现：报考前3年内，一次性扣分达4分以上（含4分）或一年内扣分累计达10分的导游员，
+						不得参加当年的中级导游员等级考试。<br/>
+					</p>
+					<img src="images/tour02.png">
+					</div>
+					<div id="tab3" class="box">
+					<h3>高级导游员等级考试<h3/><hr/>
+					<p>
+						1.学历要求：具有本科及以上学历或旅游类、外语类大专学历。<br/>
+						2.职业经历：取得中级导游员证书满3年，并且在报考前3年内以中级导游员身份实际带团不少于90个工作日。<br/>
+						3.业绩表现：报考前3年内，一次性扣分达4分以上或一年内扣分累计达6分的导游员，
+						不得参加当年的高级导游员等级考试。<br/>
+					</p>
+					</div>
+				</div>
+			</div>
+			<article class="clear">
+				<h3>杭州导游词</h3>
+				<span>作者：穆金秋</span>
+				<time>2016/9/19</time>
+				<hr/>
+				<div>
+					<p>
+						<span>文章简介：</span><br/>
+						<img src="images/hz.jpg">
+						“东南形胜，三吴都会，钱塘自古繁华”。杭州风景如画，风情如诗，宜诗宜画，如诗如画，杭州是一座生活在诗情画意中的古老文明城市。2001年，杭州萧山跨湖桥遗址考古发现，约8000年前的新石器时代早期，杭州萧山已有人类活动。从新石器时代后期的良渚文化开始，杭州有5000多年的历史。秦王政二十五年(公元前222年)置钱唐县，属会稽郡。隋开皇九年(公元589年)始称杭州。五代时的吴越国(907年~978年)在杭建都。南宋绍兴八年(1138年)，宋高宗赵构皇帝正式定都临安，历时140余年。杭州作为曾经五代吴越国和南宋王朝建都地，因此跻身中国古代七大古都之一（西安、洛阳、南京、北京、开封、安阳、杭州）。
+						<br/><hr/><b><a href="404.html">&lt;-----查看详情-----&gt;</a></b>
+					</p>
+				</div>
+			</article>
+			<article class="clear">
+				<h3>西湖导游词</h3>
+				<span>作者：穆金秋</span>
+				<time>2016/9/19</time>
+				<hr/>
+				<div>
+					<p>
+						<span>文章简介：</span><br/>
+						<img src="images/xh.jpg">
+						杭州美，美在西湖；西湖是2000多年前大约为秦汉时期由于泥沙淤积形成，因湖在杭城之西故名。西湖的美融在四季，春季柳浪闻莺，“几处早莺争暖树，谁家新燕啄春泥”；夏季曲苑风荷，“接天莲叶无穷碧，映日荷花别样红”；秋季平湖秋月，“月冷寒泉凝不流，棹歌何处泛归舟”；冬季断桥残雪，“赏雪楼台评酒价，观梅园圊订春期”。 西湖的情风花雪夜，许仙白娘子断桥重逢，梁山伯与祝英台长桥相送，岳飞精忠报国，苏小小含恨而终。泪水凝聚的西子经历了太多的悲欢离合，有着阅尽世事看透红尘的宁静淡然气质，身着柔滑清凉温润如玉的丝质锦衣，无论淡妆浓抹总是相宜。她闲适的窝在三面青山的怀抱中，看着喧嚣的闹市，赏着如织的游人。
+						<br/><hr/><b><a href="404.html">&lt;-----查看详情-----&gt;</a></b>
+					</p>
+				</div>
+			</article>
+			<article class="clear">
+				<h3>杭州手工艺品</h3>
+				<span>作者：穆金秋</span>
+				<time>2016/9/19</time>
+				<hr/>
+				<div>
+					<p>
+						<span>文章简介：</span><br/>
+						<img src="images/zs.jpg">
+						杭州的手工艺多不胜数，是名符其实的购物天堂。张小泉剪刀已有380多年历史，选用闻名的“龙泉”钢为原料，镶钢均匀，磨工精细，刀口锋利，开闭自如，刻花精巧，式样美观，经久耐用闻名中外。在一次剪刀评比会上，人们曾把40层白布叠在一起，有各种剪刀试剪，唯独张小泉剪刀，张开利嘴，咔嚓一声，一次剪断，连剪数次，次次成功。检查刃口，锋利如故，为其他剪刀望尘莫及。香港一家广播电视公司还摄取了用一号民用剪，一次剪断70层白布不缺口接着又剪单层薄绸不带丝的精彩镜头，足见其质量之高。
+						<br/><hr/><b><a href="404.html">&lt;-----查看详情-----&gt;</a></b>
+					</p>
+				</div>
+			</article>
+		</section>
+		<!-- 页面底部/footer/id="footer" -->
+		<footer id="footer">
+			<div>
+				<h3>联系我</h3>
+				<img src="images/weixin.jpg" alt="我的微信二维码">
+				<p>
+					扫一扫添加我为微信好友<br/>
+					<address>点此给我发邮件：<a href="mailto:irene1442897579@foxmail.com" 
+					title="穆金秋的邮箱">irene1442897579@foxmail.com</a></address>
+					<a class="to_top" href="#"><b>&lt;----返回顶部----&gt;</b></a><br/>
+				</p>
+				<b><a href="../../job/job.html" target="_blank">点击查看我的简历</a></b>
+			</div>
+			<div>
+				<ul class="friends">
+					<li>友情链接：</li>
+					<li><a href="404.html">达内培训</a></li>
+					<li><a href="404.html">慕课网</a></li>
+					<li><a href="404.html">京东首页</a></li>
+					<li><a href="404.html">湖州师范学院</a></li>
+					<li><a href="404.html">浙江新世界国际旅游股份有限公司</a></li>
+				</ul>
+				<ul class="study_web">
+					<li>学习网站：</li>
+					<li><a href="404.html">CSDN</a></li>
+					<li><a href="404.html">W3C_	School</a></li>
+					<li><a href="404.html">W3C校验器</a></li>
+					<li><a href="404.html">博客园</a></li>
+					<li><a href="404.html">脚本之家</a></li>
+					<li><a href="404.html">张鑫旭个人网站</a></li>
+					<li><a href="404.html">jQuery官网</a></li>
+					<li><a href="404.html">慕课网</a></li>
+				</ul>
+			<div>
+		</footer>
+		<script src="js/nav_page_2.js" type="text/javascript"></script>
+		<script src="js/nav_page_formVali.js" type="text/javascript"></script>
+		<script src="js/loop.js" type="text/javascript"></script>
+	</body>
+</html>

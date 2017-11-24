@@ -1,0 +1,128 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>淘宝店铺__经典女装服饰</title>
+		<link type="text/css" rel="stylesheet" href="css/taobao_shop.css">
+	</head>
+	<body>
+		<div id="menu">
+			<ul><!-- 默认一楼当前选中class="current" -->
+				<li><a href="#item1" class="current">1F</a></li>
+				<li><a href="#item2">2F</a></li>
+				<li><a href="#item3">3F</a></li>
+				<li><a href="#item4">4F</a></li>
+				<li><a href="#item5">5F</a></li>
+			</ul>
+		</div>
+		<div id="content">
+			<h1>购物商城----<a href="waterfall.html">前往时尚瀑布流购物</a></h1>
+			<div id="item1" class="item">
+				<h2>1F</h2>
+				<ul>
+					<li><a href="#"><img src="images/000.jpg" alt=""></a></li>
+					<li><a href="#"><img src="images/000.jpg" alt=""></a></li>
+					<li><a href="#"><img src="images/000.jpg" alt=""></a></li>
+					<li><a href="#"><img src="images/000.jpg" alt=""></a></li>
+					<li><a href="#"><img src="images/000.jpg" alt=""></a></li>
+					<li><a href="#"><img src="images/000.jpg" alt=""></a></li>
+					<li><a href="#"><img src="images/000.jpg" alt=""></a></li>
+					<li><a href="#"><img src="images/000.jpg" alt=""></a></li>
+					<li><a href="#"><img src="images/000.jpg" alt=""></a></li>
+				</ul>
+			</div>
+			<div id="item2" class="item">
+				<h2>2F</h2>
+				<ul>
+					<li><a href="#"><img src="images/000.jpg" alt=""></a></li>
+					<li><a href="#"><img src="images/000.jpg" alt=""></a></li>
+					<li><a href="#"><img src="images/000.jpg" alt=""></a></li>
+					<li><a href="#"><img src="images/000.jpg" alt=""></a></li>
+					<li><a href="#"><img src="images/000.jpg" alt=""></a></li>
+					<li><a href="#"><img src="images/000.jpg" alt=""></a></li>
+					<li><a href="#"><img src="images/000.jpg" alt=""></a></li>
+					<li><a href="#"><img src="images/000.jpg" alt=""></a></li>
+					<li><a href="#"><img src="images/000.jpg" alt=""></a></li>
+				</ul>
+			</div>
+			<div id="item3" class="item">
+				<h2>3F</h2>
+				<ul>
+					<li><a href="#"><img src="images/000.jpg" alt=""></a></li>
+					<li><a href="#"><img src="images/000.jpg" alt=""></a></li>
+					<li><a href="#"><img src="images/000.jpg" alt=""></a></li>
+					<li><a href="#"><img src="images/000.jpg" alt=""></a></li>
+					<li><a href="#"><img src="images/000.jpg" alt=""></a></li>
+					<li><a href="#"><img src="images/000.jpg" alt=""></a></li>
+					<li><a href="#"><img src="images/000.jpg" alt=""></a></li>
+					<li><a href="#"><img src="images/000.jpg" alt=""></a></li>
+					<li><a href="#"><img src="images/000.jpg" alt=""></a></li>
+				</ul>
+			</div>
+			<div id="item4" class="item">
+				<h2>4F</h2>
+				<ul>
+					<li><a href="#"><img src="images/000.jpg" alt=""></a></li>
+					<li><a href="#"><img src="images/000.jpg" alt=""></a></li>
+					<li><a href="#"><img src="images/000.jpg" alt=""></a></li>
+					<li><a href="#"><img src="images/000.jpg" alt=""></a></li>
+					<li><a href="#"><img src="images/000.jpg" alt=""></a></li>
+					<li><a href="#"><img src="images/000.jpg" alt=""></a></li>
+					<li><a href="#"><img src="images/000.jpg" alt=""></a></li>
+					<li><a href="#"><img src="images/000.jpg" alt=""></a></li>
+					<li><a href="#"><img src="images/000.jpg" alt=""></a></li>
+				</ul>
+			</div>
+			<div id="item5" class="item">
+				<h2>5F</h2>
+				<ul>
+					<li><a href="#"><img src="images/000.jpg" alt=""></a></li>
+					<li><a href="#"><img src="images/000.jpg" alt=""></a></li>
+					<li><a href="#"><img src="images/000.jpg" alt=""></a></li>
+					<li><a href="#"><img src="images/000.jpg" alt=""></a></li>
+					<li><a href="#"><img src="images/000.jpg" alt=""></a></li>
+					<li><a href="#"><img src="images/000.jpg" alt=""></a></li>
+					<li><a href="#"><img src="images/000.jpg" alt=""></a></li>
+					<li><a href="#"><img src="images/000.jpg" alt=""></a></li>
+					<li><a href="#"><img src="images/000.jpg" alt=""></a></li>
+				</ul>
+			</div>
+		</div>
+		<script src="js/1.10.2min.js"></script>
+		<script>
+			$(document).ready(function(){
+				//滚动条滚动触发函数事件
+				$(window).scroll(function(){
+					//滚动条的高度
+					var top=$(document).scrollTop();
+					//这样给经常用到的元素赋值是一个好习惯
+					//console.log()可以在控制台输出
+					//console.log(top);
+					var menu=$("#menu");
+					//jQuery通过id找元素比通过class找的效率高
+					//var items=$("#content .item");
+					//var items=$(".item");
+					var items=$("#content").find(".item");
+					//滚动条现在所在位置的item id
+					var currentId="";
+					items.each(function(){
+						var m=$(this);
+						//注意m.offset().top代表每一个item的顶部位置
+						//-300优化视觉体验
+						if(top>m.offset().top){
+							currentId="#"+m.attr("id");
+						}else{return false;}
+					});
+					// 60 item1;871 item2;1681 item3;2491 item4;3302 item4;
+
+					//设置和取消链接的current
+					var currentLink=menu.find(".current");
+					if(currentLink.attr("href")!=currentId){
+						currentLink.removeClass("current");
+						menu.find("[href="+currentId+"]").addClass("current");
+					}
+				});
+			});
+		</script>
+	</body>
+</html>
