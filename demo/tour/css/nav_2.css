@@ -6,6 +6,9 @@ body{
 	padding:0px;
 	position:relative;
 }
+article p{
+	padding:10px;
+}
 ul,li,p,h1,h2,h3,h4,h5,h6,dl,dt,dd{
 	margin:0px;
 	padding:0px;
@@ -289,7 +292,7 @@ address>a{
 #main{
 	position:absolute;
 	top:850px;
-	left:230px;
+	left:416px;
 }
 /*第一部分内容 手风琴*/
 .my-accordion{
@@ -416,8 +419,8 @@ address>a{
 #footer{
 	height:280px;
 	position:absolute;
-	top:2350px;
-	left:230px;
+	top:2484px;
+	left:446px;
 	padding:10px;
 	margin-left:30px;
 	margin-bottom:10px;
